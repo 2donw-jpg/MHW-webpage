@@ -1,0 +1,352 @@
+:root {
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+section {
+    margin: 5rem;
+    background-color: #33333380;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*NAVBAR*/
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: start;
+    padding: 0 1rem;
+}
+
+.navbar-header {
+    margin-right: 2rem;
+}
+
+.navbar-logo {
+    width: 150px;
+    height: 70px;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    height: cover;
+}
+
+.navbar-nav li {
+    list-style: none;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: white;
+    font-weight: 700;
+    text-transform: capitalize;
+    position: relative;
+    transition: ease 0.4s;
+    align-items: center;
+    justify-items: center;
+}
+
+.navbar-nav li:hover a {
+    color: #ddd;
+    font-size: 1.9rem;
+    transition: ease 0.4s;
+}
+
+.menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 1600;
+    position: relative;
+    transition: ease 0.4s;
+    text-transform: uppercase;
+}
+
+.menu li:hover a {
+    color: #ddd;
+    font-size: 1.6rem; /* Slightly increased font size on hover */
+    transition: ease 0.4s;
+}
+
+/* MAIN */
+main {
+    background-image: linear-gradient(180deg, #00000080, #00000080), url('../imgs/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px; /* Adjust this value to the height of your fixed navbar */
+    flex: 1;
+}
+/* CSS */
+
+/* CSS */
+
+/* CSS */
+
+.about-us {
+    color: #ffffff;
+  }
+
+  .about-us hr{
+    margin:2rem;
+  }
+  
+  .container-title {
+    background-color: #222222;
+    color: white;
+    width: auto;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .container-feature-monster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 2rem;
+    transition: ease 0.4s; 
+  }
+  
+  
+  .container-feature-monster:hover .image-left,
+  .container-feature-monster:hover .image-right {
+    transform: scale(1.17); /* Adjust the scale value as needed */
+    transition: ease 0.4s;
+    padding:2rem;
+    -webkit-filter: drop-shadow(15px 15px 15px #222);
+    filter: drop-shadow(15px 15px 15px #222);
+  }
+  
+  .container-feature-monster .image-left,
+  .container-feature-monster .image-right {
+    transition: ease 0.4s; 
+    max-width: 100%;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+  }  
+  
+  .container-feature-monster .image-left {
+    order: -1; /* Ensure image is on the left on larger screens */
+  }
+  
+  .container-feature-monster-content {
+    max-width: 100%;
+    text-align: center;
+    padding: 0 20px; /* Add padding for better readability */
+  }
+  
+  .container-feature-monster h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .container-feature-monster p {
+    line-height: 1.6;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .container-feature-monster {
+      flex-direction: row; /* Arrange items side by side on larger screens */
+    }
+  
+    .container-feature-monster .image-left,
+    .container-feature-monster .image-right {
+      max-width: 40%;
+    }
+  
+    .container-feature-monster-content {
+      max-width: 50%;
+      text-align: left; /* Align text to the left on larger screens */
+      padding: 0 2rem;
+    }
+  }
+  
+
+/* CAROUSEL */
+.carousel-inner .item-img {
+    filter: brightness(50%);
+    width: auto;
+    height: fit-content;
+}
+
+/* Monsters */
+.container-title {
+    background-color: #222222;
+    color: white;
+    width: auto;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.container-card-monster {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Updated grid layout */
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.card-monster {
+    background-color: white;
+    padding: 3rem 2rem;
+    border-radius: 0.5rem;
+    align-content: top;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.card-monster:hover {
+    transform: scale(1.05); 
+    transition: ease 0.4s;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.card-monster:hover .container-img{
+    transform: scale(1.1);
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    transition: ease 0.4s; /* Adjust the scale value as needed */
+}
+
+.card-monster h4 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    transition: ease 0.4s;
+}
+
+.container-img img {
+    width: 150px;
+    height: auto;
+    -webkit-filter: drop-shadow(3px 3px 3px #222);
+    filter: drop-shadow(3px 3px 3px #222);
+    transition: ease 0.4s;
+}
+
+.card-body {
+    gap: 2rem;
+}
+
+.monster-name {
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    text-align: center;
+}
+
+.monster-name .text {
+    font-weight: bold;
+}
+
+.monster-elements {
+    margin-top: 10px;
+}
+
+.monster-elements .text {
+    font-weight: bold;
+}
+
+.monster-elements a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.monster-elements a img {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.monster-weakness {
+    margin-top: 10px;
+}
+
+.monster-weakness .text {
+    font-weight: bold;
+}
+
+.monster-weakness a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.monster-weakness a img {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
